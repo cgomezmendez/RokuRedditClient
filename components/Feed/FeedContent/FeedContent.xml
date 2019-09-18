@@ -1,0 +1,14 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<!--********** Copyright 2016 Roku Corp. All Rights Reserved. ********** -->
+
+<component name="FeedContent" extends="ContentNode">
+
+	<interface >
+    <field id = "tile" type = "string" />
+    <field id = "description" type = "string" />
+    <field id = "videoUrl" type = "string" />
+    <field id = "streamFormat" type = "string" />
+  </interface>
+
+</component>
