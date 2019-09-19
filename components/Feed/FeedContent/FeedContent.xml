@@ -5,7 +5,7 @@
 <component name="FeedContent" extends="ContentNode">
 
 	<interface >
-    <field id = "tile" type = "string" />
+    <field id = "title" type = "string" />
     <field id = "description" type = "string" />
     <field id = "videoUrl" type = "string" />
     <field id = "streamFormat" type = "string" />

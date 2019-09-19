@@ -9,7 +9,7 @@ sub fetch()
     request.SetMessagePort(port)
     request.SetCertificatesFile("common:/certs/ca-bundle.crt") ' or another appropriate certificate
     request.InitClientCertificates()
-    request.SetUrl("https://www.reddit.com/r/videos/.json")
+    request.SetUrl("https://www.reddit.com" + m.top.subReddit + "/.json")
     response = request.GetToString()
     json = ParseJson(response)
     feed = CreateObject("roArray", 10, true)
@@ -33,6 +33,10 @@ sub fetch()
         if (postData.data.media <> invalid and postData.data.media.type = "youtube.com")
             itemContent.setField("videoUrl", postData.data.url)
             itemContent.setField("streamFormat", "youtube")
+        end if
+        extension = right(postData.data.url, 4)
+        if (extension = ".png" or extension = ".jpg")
+            itemContent.setField("SDPosterUrl", postData.data.url)
         end if
     end for
     m.top.content = listContent

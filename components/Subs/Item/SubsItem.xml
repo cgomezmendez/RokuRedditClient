@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="SubsItem" extends="Group" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+    <script type="text/brightscript" uri="pkg:/components/Subs/Item/SubsItem.brs" />
+
+    <interface>
+        <field id="itemContent" type="node" onChange="showContent" />
+        <field id = "focusPercent" type = "float" onChange = "showfocus" />
+    </interface>
+
+    <children>
+        <Rectangle
+      id = "itemcursor"
+      translation = "[ 0, 235 ]"
+      width = "1880"
+      height = "6"
+      color = "0xFFFFFF"
+      opacity = "0.0" />
+        <LayoutGroup itemSpacings="[20, 0]">
+            <SimpleLabel id="titleLabel" fontUri="font:LargeBoldSystemFont" />
+            <Label id="descriptionLabel" width="1880" wrap="true" maxLines="3" />
+        </LayoutGroup>
+    </children>
+</component>
