@@ -17,8 +17,13 @@ sub showContent():
     itemContent = m.top.itemContent
     m.titleLabel.text = itemContent.title
     m.contentLabel.text = itemContent.description
-    if (m.thumbnail.uri = itemContent.SDPosterUrl)
-        return
+    if (itemContent.SDPosterUrl = invalid or itemContent.SDPosterUrl = "")
+        m.thumbnail.uri = ""
+        m.thumbnail.opacity = 0
+    end if
+    if (itemContent.videoUri = invalid or itemContent.videoUri = "" or itemContent.StreamFormat <> "hls")
+        m.videoPlayer.content = ""
+        m.videoPlayer.opacity = 0
     end if
     if (itemContent.hasField("SDPosterUrl") and itemContent.SDPosterUrl <> invalid and itemContent.SDPosterUrl <> "" and (not itemContent.hasField("VideoUrl") or not m.top.itemContent.Streamformat = "hls"))
         print itemContent.SDPosterUrl
@@ -53,7 +58,8 @@ sub showFocus():
         if (m.top.focusPercent = 1)
             m.video.setFocus(true)
             m.video.control = "play"
-        else
+        end if
+        if (m.top.focusPercent <> 1 and m.video.status = "playing")
             m.video.control = "stop"
         end if
     end if
