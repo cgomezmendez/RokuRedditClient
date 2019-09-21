@@ -1,0 +1,13 @@
+<component name="GifPost" extends="Group">
+  <interface>
+    <!-- GIFDecoder callback -->
+    <function name="gifDecoderDidFinish"/>
+    <field id="post" type="node" onChange="render" />
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/GifPost/GifPost.brs"/>
+  <children>
+  <Video id="videoView" width="1920" height="1080" loop="true" />
+    <!-- <Poster id="imageView" width="1920" height="1080" loadDisplayMode="scaleToFit" /> -->
+  </children>
+</component>

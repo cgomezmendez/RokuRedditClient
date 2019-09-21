@@ -25,8 +25,8 @@ sub fetch()
         }
         itemContent = listContent.createChild("FeedContent")
         itemContent.isSelf = post.isSelf
-        itemContent.setField("title", post.title)
-        itemContent.setField("description", post.selfText)
+        itemContent.title = post.title
+        itemContent.description = post.selfText
         if (post.thumbnail <> "self" and post.thumbnail <> "default" and post.thumbnail <> "image")
             itemContent.SDPosterUrl = post.thumbnail
         end if

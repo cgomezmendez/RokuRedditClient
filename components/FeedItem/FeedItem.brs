@@ -3,17 +3,43 @@ sub init():
     m.titleLabel = m.top.findNode("titleLabel")
     m.contentLabel = m.top.findNode("contentLabel")
     m.imageView = m.top.findNode("imageView")
+    m.imageView.observeField("loadStatus", "onImageStateChange")
+    m.loadingIndicator = m.top.findNode("loadingIndicator")
     m.postTypes = { self: 0 }
 end sub
 
 sub renderContent():
     post = m.top.itemContent
+    if (m.imageView.url <> invalid and m.imageView.uri <> "")
+        return
+    end if
     m.titleLabel.text = post.title
-    ' m.contentLabel.text = post.description
     titleHeight = m.titleLabel.boundingRect().height
-    if (Right(post.url, 4) = ".jpg") then
+
+    urlExtension = Right(post.url, 4)
+    print post.url
+    if (urlExtension = ".jpg" or urlExtension = ".png") then
+        print "imagePost"
+        m.loadingIndicator.height = 1040 - titleHeight
+        m.loadingIndicator.opacity = 1
+        m.imageView.height = 1040 - titleHeight
         m.imageView.uri = post.url
-        m.imageView.height = 1080 - titleHeight
+    else if (urlExtension = ".gif" or urlExtension = "gifv" or urlExtension = ".mp4" or urlExtension = "mp4v")
+        print "gifPost"
+        m.loadingIndicator.height = 1040 - titleHeight
+        m.loadingIndicator.opacity = 1
+        m.imageView.height = 1040 - titleHeight
+        m.imageView.uri = post.url
+    else if (post.description = invalid or Len(post.description) = 0) then
+        print "webPost"
+        m.loadingIndicator.height = 1040 - titleHeight
+        m.loadingIndicator.opacity = 1
+        m.imageView.height = 1040 - titleHeight
+        m.imageView.uri = "https://api.qrserver.com/v1/create-qr-code/?size=1920x1080&data=" + post.url
+    else
+        print "TextPost"
+        m.contentLabel.text = post.description
+        m.contentLabel.height = 1040 - titleHeight
     end if
 end sub
 
@@ -99,15 +125,16 @@ end function
 '     m.loadingIndicator.height = 1040 - textHeight
 ' end sub
 
-' sub onImageStateChange(event as object)
-'     print "loadStatusChange" + event.getData()
-'     if (event.getData() = "ready")
-'         m.loadingIndicator.opacity = 0
-'     end if
-'     if (event.getData() = "loading")
-'         m.loadingIndicator.opacity = 1
-'     end if
-' end sub
+sub onImageStateChange(event as object)
+    print "loadStatusChange" + event.getData()
+    if (event.getData() = "ready")
+        m.loadingIndicator.opacity = 0
+    end if
+    if (event.getData() = "failed")
+        m.loadingIndicator.opacity = 0
+        m.contentLabel.text = "Failed to load image"
+    end if
+end sub
 
 ' sub onVideoPlayerStateChange(event as object)
 '     print "onVideoPlayerStateChange" + event.getData()

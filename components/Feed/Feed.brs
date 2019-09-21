@@ -36,18 +36,30 @@ sub onItemSelected()
     selectedPost = m.downloadFeedTask.content.getChild(m.feedList.itemSelected)
     m.global.selectedSubReddit = m.top.subReddit
     m.global.SelectedPost = m.feedList.itemSelected
-    ' m.global.addFields([selectedSubReddit: m.top.subReddit,
-    ' selectedPost: m.feedList.selectedSubReddit])
+
     mainGroup = m.top.getParent().findNode("mainGroup")
     mainGroup.removeChildIndex(0)
-    if (Right(selectedPost.url, 4) = ".jpg") then
+    urlExtension = Right(selectedPost.url, 4)
+    print Str(Len(selectedPost.description))
+    if (urlExtension = ".jpg" or urlExtension = ".png") then
         m.ImagePost = mainGroup.createChild("ImagePost")
         m.ImagePost.post = selectedPost
+        mainGroup.setFocus(true)
+    else if (urlExtension = ".gif" or urlExtension = "gifv" or urlExtension = ".mp4" or urlExtension = "mp4v")
+        m.ImagePost = mainGroup.createChild("GifPost")
+        m.ImagePost.post = selectedPost
+        mainGroup.setFocus(true)
+    else if (selectedPost.description = invalid or Len(selectedPost.description) = 0) then
+        print "webPost"
+        m.ImagePost = mainGroup.createChild("WebPost")
+        m.ImagePost.post = selectedPost
+        mainGroup.setFocus(true)
     else
+        print "TextPost"
         m.TextPost = mainGroup.createChild("TextPost")
         m.TextPost.post = selectedPost
     end if
-    mainGroup.setFocus(true)
+    ' mainGroup.setFocus(true)
 
     ' item = m.feedList.focusedChild
     ' item.m.videoPlayer.control = "play"

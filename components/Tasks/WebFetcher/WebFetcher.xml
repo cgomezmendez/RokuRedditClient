@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="WebFetcher" extends="Task" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<script type="text/brightscript" uri="pkg:/components/Tasks/WebFetcher/WebFetcher.brs" />
+
+	<interface>
+		<field id="url" type="string" />
+		<field id="content" type="node" />
+	</interface>
+</component>
