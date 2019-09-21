@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="Feed" extends="Group" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<script type="text/brightscript" uri="pkg:/components/Feed/Feed.brs" />
+	
+	<children>
+	<FeedItem
+			title="TIL People have a cognitive bias where they over-estimate how noticeable their embarrassing behaviour is to others."
+			content="https://effectiviology.com/spotlight-effect-stop-being-self-conscious/" />
+	</children>
+</component>

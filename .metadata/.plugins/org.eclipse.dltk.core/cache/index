@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ASCII"?>
+<cache:CacheIndex xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cache="http://eclipse.org/dltk/cache_model" lastIndex="198" environment="org.eclipse.dltk.core.environment.localEnvironment">
+  <entries path="/home/chris/eclipse-workspace/RedditReader/source" timestamp="1568683076668" lastAccessTime="1569105249635">
+    <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/1743366894/1.idx"/>
+  </entries>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/LoadingIndicator" timestamp="1568683076676" lastAccessTime="1569105248575">
+    <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/4104379357/95.idx"/>
+  </entries>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Tasks/YoutubeLinkOpener" timestamp="1568714937482" lastAccessTime="1569105248639">
+    <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/2903869328/129.idx"/>
+  </entries>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Tasks/FeedDownloader.xml" timestamp="1568719811349" lastAccessTime="1569105247780"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/LoadingIndicator/LoadingIndicator.xml" timestamp="1568683076676" lastAccessTime="1569105247785"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Tasks/YoutubeLinkOpener/YoutubeLinkOpener.xml" timestamp="1568714987302" lastAccessTime="1569105247786"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/FeedItem" timestamp="1568703284085" lastAccessTime="1569105249506">
+    <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/4104379357/157.idx"/>
+  </entries>
+  <entries path="#special#brightscript_types#/builtins/RSG_Components" lastAccessTime="1569105246969">
+    <attributes name="indexed" location="2838196607/903500642/159.idx"/>
+  </entries>
+  <entries path="#special#brightscript_types#/builtins/intrinsics_types" lastAccessTime="1569105246991">
+    <attributes name="indexed" location="2838196607/903500642/161.idx"/>
+  </entries>
+  <entries path="#special#brightscript_types#/builtins/types" lastAccessTime="1569105246991">
+    <attributes name="indexed" location="2838196607/903500642/163.idx"/>
+  </entries>
+  <entries path="#special#brightscript_types#/builtins/v30_bslDefender" lastAccessTime="1569105246992">
+    <attributes name="indexed" location="2838196607/903500642/165.idx"/>
+  </entries>
+  <entries path="#special#brightscript_types#/builtins/types2" lastAccessTime="1569105246992">
+    <attributes name="indexed" location="2838196607/903500642/167.idx"/>
+  </entries>
+  <entries path="#special#brightscript_types#/builtins/RCL" lastAccessTime="1569105246992">
+    <attributes name="indexed" location="2838196607/903500642/169.idx"/>
+  </entries>
+  <entries path="#special#brightscript_types#/builtins/globals" lastAccessTime="1569105246992">
+    <attributes name="indexed" location="2838196607/903500642/171.idx"/>
+  </entries>
+  <entries path="#special#brightscript_types#/builtins/Roku_Ads" lastAccessTime="1569105246992">
+    <attributes name="indexed" location="2838196607/903500642/173.idx"/>
+  </entries>
+  <entries path="#special#brightscript_types#/builtins/v30_bslCore" lastAccessTime="1569105246993">
+    <attributes name="indexed" location="2838196607/903500642/175.idx"/>
+  </entries>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Tasks/SubsFetcher" timestamp="1568849856722" lastAccessTime="1569105247780"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Tasks/WebFetcher" timestamp="1569058498241" lastAccessTime="1569105247780"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Feed/FeedContent/FeedContent.brs" timestamp="1568690963727" lastAccessTime="1569105248503">
+    <attributes name="indexed" location="2838196607/3987655718/179.idx"/>
+  </entries>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Feed/FeedContent/FeedContent.xml" timestamp="1569036494360" lastAccessTime="1569105247781"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Subs" timestamp="1568850570575" lastAccessTime="1569105247782"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/GifPost" timestamp="1569044755789" lastAccessTime="1569105247782"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/FrameAnimator.xml" timestamp="1569044672848" lastAccessTime="1569105247782"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/GIFDecoder.brs" timestamp="1569047126110" lastAccessTime="1569105247782"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/FrameAnimator.brs" timestamp="1569044672824" lastAccessTime="1569105247782"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/MainScene.xml" timestamp="1569047404818" lastAccessTime="1569105247782"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/GIFDecoder.xml" timestamp="1569044676900" lastAccessTime="1569105247782"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/ImagePost" timestamp="1569042873081" lastAccessTime="1569105247782"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Tasks" timestamp="1569058403737" lastAccessTime="1569105249572">
+    <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/4104379357/193.idx"/>
+  </entries>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/WebPost" timestamp="1569059111181" lastAccessTime="1569105247783"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/TextPost" timestamp="1569038594940" lastAccessTime="1569105247783"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Feed/Feed.xml" timestamp="1569041376403" lastAccessTime="1569105247784"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Feed/FeedContent" timestamp="1568690963727" lastAccessTime="1569105248503">
+    <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/207305137/195.idx"/>
+  </entries>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/LoadingIndicator/LoadingIndicator.brs" timestamp="1568683076676" lastAccessTime="1569105248575">
+    <attributes name="indexed" location="2838196607/3687292903/187.idx"/>
+  </entries>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Tasks/YoutubeLinkOpener/YoutubeLinkOpener.brs" timestamp="1568770899812" lastAccessTime="1569105248638">
+    <attributes name="indexed" location="2838196607/3214868668/189.idx"/>
+  </entries>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/FeedItem/FeedItem.xml" timestamp="1569104137957" lastAccessTime="1569105247787"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components" timestamp="1569056277230" lastAccessTime="1569105249544">
+    <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/1743366894/197.idx"/>
+  </entries>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Feed/Feed.brs" timestamp="1569100919226" lastAccessTime="1569105249244"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/FeedItem/FeedItem.brs" timestamp="1569103943273" lastAccessTime="1569105249506"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/MainScene.brs" timestamp="1569044252621" lastAccessTime="1569105249544"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/components/Tasks/FeedDownloader.brs" timestamp="1569057251803" lastAccessTime="1569105249572"/>
+  <entries path="/home/chris/eclipse-workspace/RedditReader/source/main.brs" timestamp="1568856428195" lastAccessTime="1569105249635"/>
+</cache:CacheIndex>

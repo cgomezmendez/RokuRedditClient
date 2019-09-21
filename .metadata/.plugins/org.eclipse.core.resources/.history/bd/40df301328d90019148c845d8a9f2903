@@ -1,0 +1,49 @@
+' ********** Copyright 2016 Roku Corp.  All Rights Reserved. ********** 
+
+sub init()
+    m.itemcursor = m.top.findNode("itemcursor")
+    m.titleLabel = m.top.findNode("titleLabel")
+    m.contentLabel = m.top.findNode("contentLabel")
+    m.thumbnail = m.top.findNode("thumbnail")
+    m.videoPlayer = m.top.findNode("videoPlayer")
+'    m.top.setFocus(true)
+end sub
+
+sub showContent():
+    setupVideo()
+    itemContent = m.top.itemContent
+    m.titleLabel.text = itemContent.title
+    m.contentLabel.text = itemContent.description
+'    if (itemContent.hasField("SDPosterUrl"))
+'        m.thumbnail.uri = itemContent.SDPosterUrl
+'    end if
+    m.video.setFocus(true)
+    updateLayout()
+end sub
+
+sub setupVideo():
+    videoContent = CreateObject("RoSGNode", "ContentNode")
+    videoContent.url = "https://v.redd.it/3ny7fpskqzm31/HLSPlaylist.m3u8"
+    videoContent.streamformat = "hls"
+    m.video = m.top.findNode("videoPlayer")
+    m.video.content = videoContent
+'    m.video.control = "play"
+end sub
+
+sub showFocus():
+    ? m.top.focusPercent
+    if (focus = 1)
+        m.video.setFocus(true)
+        m.video.control = "play"
+'    m.top.setFocus(true)
+'    m.itemcursor.opacity = m.top.focusPercent
+end sub
+
+sub updateLayout():
+    contentLabelTranslation = m.titleLabel.boundingRect().height
+    if (not m.top.itemContent.hasField("SDPosterUrl"))
+        contentLabelTranslation += m.thumbnail.boundingRect().height
+    end if
+    m.contentLabel.translation = [0, contentLabelTranslation + 20]
+    m.thumbnail.translation = [0, m.titleLabel.boundingRect().height + 20]
+end sub

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="Feed" extends="Group"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd"
+	initialFocus="feedList">
+
+	<script type="text/brightscript"
+		uri="pkg:/components/Feed/Feed.brs" />
+
+	<children>
+		<Group>
+			<LoadingIndicator id="loadingIndicator"
+				imageUri="pkg:/images/loader.png" backgroundColor="0x000000"
+				imageWidth="100" fadeInterval="0.2" text="Loading..." />
+			<MarkupList id="feedList" itemComponentName="FeedItem"
+				vertFocusAnimationStyle="floatingFocus"
+				drawFocusFeedback="false"
+				itemSize="[1080, 100]" />
+		</Group>
+	</children>
+</component>

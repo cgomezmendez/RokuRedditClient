@@ -1,0 +1,1 @@
+/home/chris/eclipse-workspace/.metadata/.plugins/org.eclipse.dltk.core/518533128.index
