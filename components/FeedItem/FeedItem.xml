@@ -10,12 +10,14 @@
 	<script type="text/brightscript" uri="pkg:/components/FeedItem/FeedItem.brs" />
 
 	<children>
-		<LayoutGroup translation="[20, 20]" id="contentGroup" itemSpacings="[20, 20]">
+		<LayoutGroup translation="[20, 20]" id="contentGroup">
 			<Label id="titleLabel" wrap="true" width="1880" font="font:LargeBoldSystemFont" />
-			<Label id="contentLabel" width="1880" wrap="true" />
 			<!-- <Group id="mediaGroup"> -->
-			<!-- <LoadingIndicator id="loadingIndicator" imageUri="pkg:/images/loader.png" backgroundColor="0x000000" imageWidth="100" fadeInterval="0.2" text="Loading..."/> -->
-			<Poster id="imageView" width="1880" loadDisplayMode="scaleToFit" opacity="0" />
+				<!-- <Label id="contentLabel" width="1880" wrap="true" /> -->
+				<!-- <Group id="mediaGroup"> -->
+				<!-- <LoadingIndicator id="loadingIndicator" imageUri="pkg:/images/loader.png" backgroundColor="0x000000" imageWidth="100" fadeInterval="0.2" text="Loading..."/> -->
+				<Poster id="imageView" width="1880" loadDisplayMode="scaleToFit" />
+			<!-- </Group> -->
 			<!-- </Group> -->
 		</LayoutGroup>
 	</children>

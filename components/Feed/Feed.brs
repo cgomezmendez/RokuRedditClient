@@ -3,12 +3,13 @@
 sub init()
 
     m.feedList = m.top.findNode("feedList")
-    '    print m.feedLisr.content[0]
+    m.feedList.setFocus(true)
     m.loadingIndicator = m.top.findNode("loadingIndicator")
 
     m.feedList.observeField("itemSelected", "onItemSelected")
     m.top.observeField("subReddit", "fetch")
     m.loadingIndicator.opacity = 1.0
+
     fetch()
 end sub
 
@@ -18,7 +19,6 @@ sub fetch()
         m.downloadFeedTask.subReddit = m.top.subReddit
         m.downloadFeedTask.observeField("content", "setContent")
         m.downloadFeedTask.control = "RUN"
-        m.top.setFocus(true)
     end if
 end sub
 
@@ -40,8 +40,14 @@ sub onItemSelected()
     ' selectedPost: m.feedList.selectedSubReddit])
     mainGroup = m.top.getParent().findNode("mainGroup")
     mainGroup.removeChildIndex(0)
-    m.TextPost = mainGroup.createChild("TextPost")
-    m.TextPost.post = selectedPost
+    if (Right(selectedPost.url, 4) = ".jpg") then
+        m.ImagePost = mainGroup.createChild("ImagePost")
+        m.ImagePost.post = selectedPost
+    else
+        m.TextPost = mainGroup.createChild("TextPost")
+        m.TextPost.post = selectedPost
+    end if
+    mainGroup.setFocus(true)
 
     ' item = m.feedList.focusedChild
     ' item.m.videoPlayer.control = "play"

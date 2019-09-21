@@ -1,5 +1,6 @@
 sub init()
     m.subsList = m.top.findNode("subsList")
+    m.subsList.setFocus(true)
     m.subsList.observeField("itemSelected", "onItemSelected")
     fetch()
 end sub
@@ -8,7 +9,6 @@ sub fetch()
     m.downloadSubsTask = CreateObject("roSGNode", "SubsFetcher")
     m.downloadSubsTask.observeField("content", "setContent")
     m.downloadSubsTask.control = "RUN"
-    m.top.setFocus(true)
 end sub
 
 sub setContent()

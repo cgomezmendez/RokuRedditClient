@@ -24,6 +24,7 @@ end sub
 
 function onKeyEvent(key as string, press as boolean) as boolean
     handled = false
+    print key
     if press then
         if (key = "back") then
             handled = true

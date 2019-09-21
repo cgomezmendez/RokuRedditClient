@@ -2,13 +2,19 @@ sub init():
     ? "Init:"
     m.titleLabel = m.top.findNode("titleLabel")
     m.contentLabel = m.top.findNode("contentLabel")
+    m.imageView = m.top.findNode("imageView")
     m.postTypes = { self: 0 }
 end sub
 
 sub renderContent():
     post = m.top.itemContent
     m.titleLabel.text = post.title
-    m.contentLabel.text = post.description
+    ' m.contentLabel.text = post.description
+    titleHeight = m.titleLabel.boundingRect().height
+    if (Right(post.url, 4) = ".jpg") then
+        m.imageView.uri = post.url
+        m.imageView.height = 1080 - titleHeight
+    end if
 end sub
 
 function postType(post as object) as integer

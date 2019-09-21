@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="ImagePost" extends="Group" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+	<interface>
+		<field id="post" type="node" onChange="render" />
+	</interface>
+
+
+	<script type="text/brightscript" uri="pkg:/components/ImagePost/ImagePost.brs" />
+
+	<children>
+		<Poster id="imageView" width="1920" height="1080" loadDisplayMode="scaleToFit" />
+	</children>
+
+</component>
