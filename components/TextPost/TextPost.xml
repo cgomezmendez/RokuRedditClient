@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="TextPost" extends="Group" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+	<interface>
+		<field id="post" type="node" onChange="render" />
+	</interface>
+
+
+	<script type="text/brightscript" uri="pkg:/components/TextPost/TextPost.brs" />
+
+	<children>
+		<ScrollableText id="textLabel" width="1880" height="1000" translation="[20, 20]" />
+	</children>
+
+</component>

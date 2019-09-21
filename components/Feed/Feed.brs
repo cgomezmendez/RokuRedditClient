@@ -1,6 +1,7 @@
 ' ********** Copyright 2016 Roku Corp.  All Rights Reserved. **********
 
 sub init()
+
     m.feedList = m.top.findNode("feedList")
     '    print m.feedLisr.content[0]
     m.loadingIndicator = m.top.findNode("loadingIndicator")
@@ -24,11 +25,28 @@ end sub
 sub setContent()
     m.feedList.content = m.downloadFeedTask.content
     m.loadingIndicator.opacity = 0.0
+    m.feedList.jumpToItem = m.top.jumpToItem
 end sub
 
 sub onItemSelected()
-    item = m.downloadFeedTask.content.getChild(m.feedList.itemSelected)
-    openYoutube(item)
+    print m.top.subReddit
+    ' m.global = screen.getGlobalNode()
+
+    ' print m.downloadFeedTask.content.getChild(m.feedList.itemSelected).title
+    selectedPost = m.downloadFeedTask.content.getChild(m.feedList.itemSelected)
+    m.global.selectedSubReddit = m.top.subReddit
+    m.global.SelectedPost = m.feedList.itemSelected
+    ' m.global.addFields([selectedSubReddit: m.top.subReddit,
+    ' selectedPost: m.feedList.selectedSubReddit])
+    mainGroup = m.top.getParent().findNode("mainGroup")
+    mainGroup.removeChildIndex(0)
+    m.TextPost = mainGroup.createChild("TextPost")
+    m.TextPost.post = selectedPost
+
+    ' item = m.feedList.focusedChild
+    ' item.m.videoPlayer.control = "play"
+    ' item = m.downloadFeedTask.content.getChild(m.feedList.itemSelected)
+    ' openYoutube(item)
     '    ? "onKeyEvent"
     '    handled = false
 

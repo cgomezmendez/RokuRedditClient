@@ -2,25 +2,21 @@
 
 <component name="FeedItem" extends="Group" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
 	<interface>
-		<field id="itemContent" type="node" onChange="showContent" />
-		<field id="focusPercent" type="float" onchange="showFocus" />
+		<field id="itemContent" type="node" onChange="renderContent" />
+		<!-- <field id="focusPercent" type="float" onchange="showFocus" /> -->
 	</interface>
 
 
 	<script type="text/brightscript" uri="pkg:/components/FeedItem/FeedItem.brs" />
 
-	<script type="text/brightscript" uri="pkg:/components/FeedItem/FeedItem.brs" />
-
 	<children>
-		<LayoutGroup translation="[20, 20]" id="contentGroup">
+		<LayoutGroup translation="[20, 20]" id="contentGroup" itemSpacings="[20, 20]">
 			<Label id="titleLabel" wrap="true" width="1880" font="font:LargeBoldSystemFont" />
 			<Label id="contentLabel" width="1880" wrap="true" />
-			<Group id="mediaGroup">
-				<Video id="videoPlayer" width="1880" loop="true" opacity="0" />
-				<Poster id="thumbnail" width="1880" loadDisplayMode="scaleToFit" />
-				<LoadingIndicator id="loadingIndicator" imageUri="pkg:/images/loader.png" backgroundColor="0x000000" imageWidth="100" fadeInterval="0.2" text="Loading..."
-				opacity="0" />
-			</Group>
+			<!-- <Group id="mediaGroup"> -->
+			<!-- <LoadingIndicator id="loadingIndicator" imageUri="pkg:/images/loader.png" backgroundColor="0x000000" imageWidth="100" fadeInterval="0.2" text="Loading..."/> -->
+			<Poster id="imageView" width="1880" loadDisplayMode="scaleToFit" opacity="0" />
+			<!-- </Group> -->
 		</LayoutGroup>
 	</children>
 

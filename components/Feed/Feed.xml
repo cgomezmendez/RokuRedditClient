@@ -5,11 +5,12 @@
 	<script type="text/brightscript" uri="pkg:/components/Feed/Feed.brs" />
 	<interface>
 		<field id="subReddit" type="string" value="" />
+		<field id="jumpToItem" type="integer" />
 	</interface>
 	<children>
 		<Group>
 			<LoadingIndicator id="loadingIndicator" imageUri="pkg:/images/loader.png" backgroundColor="0x000000" imageWidth="100" fadeInterval="0.2" text="Loading..." />
-			<MarkupList id="feedList" itemComponentName="FeedItem" vertFocusAnimationStyle="floatingFocus" drawFocusFeedback="false" itemSize="[1920, 1080]" />
+			<MarkupList id="feedList" itemComponentName="FeedItem" vertFocusAnimationStyle="floatingFocus" drawFocusFeedback="false" itemSize="[1920, 1080]" jumpToItem="5" />
 		</Group>
 	</children>
 </component>

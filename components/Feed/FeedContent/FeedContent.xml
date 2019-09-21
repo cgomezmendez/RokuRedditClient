@@ -4,11 +4,14 @@
 
 <component name="FeedContent" extends="ContentNode">
 
-	<interface >
+  <interface >
     <field id = "title" type = "string" />
     <field id = "description" type = "string" />
     <field id = "videoUrl" type = "string" />
     <field id = "streamFormat" type = "string" />
+    <field id = "url" type="string" />
+    <field id="isRedditVideo" type="boolean" />
+    <field id="isSelf" type="boolean" />
   </interface>
 
 </component>
